@@ -52,7 +52,7 @@ public class HistorialMed {
         this.enfermedad = enfermedad;
     }
 
-    //metodo para actualizar el registro o agregar un historial
+    //metodo para ACTUALIZAR el registro o AGREGAR un historial
     //en este proceso se ingresan los datos desde el inicio en caso de que se busque actualizar
     public void actualizarRegistro() throws IOException, SQLException {
         boolean i = true;
@@ -191,8 +191,7 @@ public class HistorialMed {
         }
     }
 
-
-    //metodo para obtener el historial medico de un caballo basado en su id
+    //metodo para obtener el historial medico de un caballo basado en su id (modelo de tabla)
     public DefaultTableModel buscarHistorial() throws IOException {
         //se debe diseñar un nuevo modelo de tabla donde solo se encuentre información del caballo solicitado
         DefaultTableModel m = new DefaultTableModel();

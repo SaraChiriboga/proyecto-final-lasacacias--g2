@@ -233,7 +233,6 @@ public class Caballo {
         }
     }
 
-
     //metodo obtener un modelo de tabla basado en el listado de caballos de la base de datos
     public DefaultTableModel transferDetalles(){
         String sql = "SELECT * FROM caballo";
@@ -276,6 +275,7 @@ public class Caballo {
         return model;
     }
 
+    //metodo para editar caballo
     public void editarCaballo(int id) throws IOException, SQLException {
         // Verificar si el id existe
         String consultaExistencia = "SELECT * FROM caballo WHERE idcaballo = ?";
@@ -329,8 +329,6 @@ public class Caballo {
         }
     }
 
-
-
     //metodo para eliminar un caballo de los registros del criadero en base a su id
     public void eliminarCaballo(int id){
         String instruccion = "DELETE FROM caballo WHERE idcaballo = ?";
@@ -347,7 +345,7 @@ public class Caballo {
         }
     }
 
-    //metodo para buscar un caballo en base a su id
+    //metodo para buscar un caballo en base a su id (modelo de tabla)
     public DefaultTableModel buscarCaballo() throws IOException {
         System.out.printf("ID del caballo: ");
         int id = Integer.parseInt(sc.readLine());
