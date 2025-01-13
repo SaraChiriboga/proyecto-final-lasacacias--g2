@@ -26,5 +26,5 @@
             <version>RELEASE240</version>
         </dependency>
     </dependencies>
-
+    <name>Las Acacias - Gestor</name>
 </project>

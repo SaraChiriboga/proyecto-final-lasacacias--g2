@@ -110,14 +110,20 @@ public class Administrador extends Usuario {
                 caballito.obtencionDetalles(); //se ejecuta el metodo de obtencion
                 break;
             case "Editar información caballo":
-                System.out.printf("ID del caballo: ");
-                int edit = Integer.parseInt(sc.readLine());
-                caballito.editarCaballo(edit);
+                try{
+                    System.out.printf("ID del caballo: ");
+                    int edit = Integer.parseInt(sc.readLine());
+                    caballito.editarCaballo(edit);
+                }catch (NumberFormatException e){System.out.println("Es necesario que coloque el id del caballo...");}
                 break;
             case "Eliminar Caballo":
-                System.out.printf("ID del caballo: ");
-                int delete = Integer.parseInt(sc.readLine());
-                caballito.eliminarCaballo(delete);
+                try {
+                    System.out.printf("ID del caballo: ");
+                    int id = Integer.parseInt(sc.readLine());
+                    caballito.eliminarCaballo(id);
+                }catch (NumberFormatException e){
+                    System.out.println("Es necesario que coloque el id del caballo...");
+                }
                 break;
             case "Buscar Caballo":
                 caballos.mostrarResultadoBusqueda();
@@ -129,9 +135,12 @@ public class Administrador extends Usuario {
                 historiales.actualizarRegistro();
                 break;
             case "Eliminar todos los historiales de un caballo":
-                System.out.printf("ID del caballo: ");
-                int deletehist = Integer.parseInt(sc.readLine());
-                historiales.eliminarHistorial(deletehist);
+                try{
+                    System.out.printf("ID del caballo: ");
+                    int deletehist = Integer.parseInt(sc.readLine());
+                    historiales.eliminarHistorial(deletehist);
+                }catch (NumberFormatException e){
+                    System.out.println("Es necesario que coloque el id del caballo...");}
                 break;
             case "Buscar historial":
                 histmed.mostrarHistorialEncontrado();

@@ -34,7 +34,7 @@ public class Criadero {
         this.descripcion = descripcion;
     }
 
-    // método para agregar campo
+    // metodo para agregar campo
     public void agregarCampo() throws IOException, UniqueValueException, SQLException{
         boolean i = true;
         while (i) {
@@ -73,7 +73,6 @@ public class Criadero {
             }
         }
     }
-
 
     //metodo para eliminar campo
     public void eliminarCampo() throws IOException {

@@ -85,9 +85,12 @@ public class Veterinario extends Usuario {
                 historiales.actualizarRegistro();
                 break;
             case "Eliminar todos los historiales de un caballo":
-                System.out.printf("ID del caballo: ");
-                int elim = Integer.parseInt(sc.readLine());
-                historiales.eliminarHistorial(elim);
+                try{
+                    System.out.printf("ID del caballo: ");
+                    int deletehist = Integer.parseInt(sc.readLine());
+                    historiales.eliminarHistorial(deletehist);
+                }catch (NumberFormatException e){
+                    System.out.println("Es necesario que coloque el id del caballo...");}
                 break;
             case "Buscar historial":
                 hist.mostrarHistorialEncontrado();
